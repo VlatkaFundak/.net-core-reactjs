@@ -1,1 +1,1 @@
-# no-name-project
+# .net-core-reactjs
