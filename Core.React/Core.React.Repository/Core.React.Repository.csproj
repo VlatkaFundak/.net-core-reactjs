@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="SD.LLBLGen.Pro.ORMSupportClasses.Web" Version="5.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.React.Common\Core.React.Common.csproj" />
+  </ItemGroup>
+
 </Project>

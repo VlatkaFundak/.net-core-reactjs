@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Autofac.Extensions.DependencyInjection;
 
 namespace Core.React.API
 {
@@ -20,6 +21,9 @@ namespace Core.React.API
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseKestrel()
+                .ConfigureServices(services => services.AddAutofac())
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 .Build();
     }
 }
